@@ -53,25 +53,47 @@ let people = [{name:"Themba",age:24,residence:"Zone 12"},
     {name:"Petro",age:27,residence:"Boitumelo"},
     {name:"Smanga", age:24, residence:"Evaton Central"}
 ];
-
 let [themba, , smanga] = people; 
 let {name, residence} = themba;
 console.log(`My name is ${name}, and I live in ${residence}\n\n\n`);
 
-let netCost = (price, quantity) => {
+const totalAmount = (price, quantity) => {
     return price * quantity;
 }
+console.log(totalAmount(12,2));
 
-console.log(netCost(12,2))
+
+const product = {name:"Ford",model:"Fiesta",
+    price:150000,quantity:1, year:2021};
+
+const productDetails = (product_) => {
+    const {name, model, price, year} = product_;
+    console.log(`\n\nThe product is a ${name} ${model} from ${year}, selling for R ${price}.\n\n`);
+}
+productDetails(product);
+
+
+const productsArray = [{type:"cellphone",name:"Samsung",model:"Galaxy",
+    price:1500,quantity:1, year:2025}, {type: "laptop",name:"HP",model:"Pavillion",
+    price:15000,quantity:1, year:2021}];
+const allProductsDetails = (products) => {
+    products.forEach(prod => {
+        const {type, name, model, price, year} = prod;
+        console.log(`\n\nThe product is a ${type}, named ${name} ${model} from ${year}, selling for R ${price}.\n`);
+    })
+}
+allProductsDetails(productsArray);
 
 
 // let sortArrayInAscending = (numbers) => {
 //     let i = 1;
 //     for (i; i <= numbers.length; i++){
+//         let currentNum = numbers[i];
 //         let j = i-1;
 //         while (j >= 0){
+//             console.log("Current Number: "+currentNum);
+//             console.log("COmpared to "+numbers[j]);
 //             if (numbers[i] < numbers[j]){
-//                 let currentNum = numbers[i];
 //                 numbers[i] = numbers[j];
 //                 numbers[j] = currentNum;
 //             }
@@ -80,5 +102,5 @@ console.log(netCost(12,2))
 //     }
 //     return numbers;
 // }
-
+//
 // console.log(sortArrayInAscending([5,43,6,8,0,7,4,1,2,23]));
