@@ -56,4 +56,29 @@ let people = [{name:"Themba",age:24,residence:"Zone 12"},
 
 let [themba, , smanga] = people; 
 let {name, residence} = themba;
-console.log(`My name is ${name}, and I live in ${residence}`);
+console.log(`My name is ${name}, and I live in ${residence}\n\n\n`);
+
+let netCost = (price, quantity) => {
+    return price * quantity;
+}
+
+console.log(netCost(12,2))
+
+
+// let sortArrayInAscending = (numbers) => {
+//     let i = 1;
+//     for (i; i <= numbers.length; i++){
+//         let j = i-1;
+//         while (j >= 0){
+//             if (numbers[i] < numbers[j]){
+//                 let currentNum = numbers[i];
+//                 numbers[i] = numbers[j];
+//                 numbers[j] = currentNum;
+//             }
+//             j--;
+//         }
+//     }
+//     return numbers;
+// }
+
+// console.log(sortArrayInAscending([5,43,6,8,0,7,4,1,2,23]));
