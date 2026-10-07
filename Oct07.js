@@ -85,6 +85,22 @@ const allProductsDetails = (products) => {
 allProductsDetails(productsArray);
 
 
+const me = {name:"Tshepos",amount:500};
+
+function Buy(MeObject,ArrayOfProducts){
+    let amountPayable = 0;
+    MeObject.Products = ArrayOfProducts;
+    ArrayOfProducts.map(prod =>
+        amountPayable += (prod.price * prod.quantity) );
+    MeObject.AmountDue = amountPayable;
+    let changeReceivable = MeObject.amount - amountPayable;
+    MeObject.Verdict = changeReceivable < 0 ? `Sorry!!! You are R ${changeReceivable * -1} short` :
+        `Thank you for you patronage. Your change is ${changeReceivable}`;
+    console.log(MeObject);
+}
+
+Buy(me, [{name: "Mouse",price:90,quantity:3}]);
+
 // let sortArrayInAscending = (numbers) => {
 //     let i = 1;
 //     for (i; i <= numbers.length; i++){
