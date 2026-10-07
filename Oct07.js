@@ -49,4 +49,11 @@ console.log(siblingAges.join("\n"));
 // console.log("Practical example!!!!");
 // let exampleArray = [["Tshepo","Majoro","tshepomajoro001@gmail.com"],["Andile","Andy","andy@gmail.com"]];
 // console.log(exampleArray.join("\n"));
+let people = [{name:"Themba",age:24,residence:"Zone 12"}, 
+    {name:"Petro",age:27,residence:"Boitumelo"},
+    {name:"Smanga", age:24, residence:"Evaton Central"}
+];
 
+let [themba, , smanga] = people; 
+let {name, residence} = themba;
+console.log(`My name is ${name}, and I live in ${residence}`);
